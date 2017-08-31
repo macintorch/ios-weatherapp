@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,17 +19,56 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1tJ-xh-39a">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's The Weather?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdW-Bm-ovd">
+                                <rect key="frame" x="44.5" y="93" width="286" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your city" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkP-yb-Emr">
+                                <rect key="frame" x="132.5" y="160" width="110.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. London, Kuala Lumpur" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z2D-9U-Smb">
+                                <rect key="frame" x="16" y="204" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SG-Zr-DeI">
+                                <rect key="frame" x="16" y="242" width="343" height="30"/>
+                                <state key="normal" title="Submit"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMY-IB-VDj">
+                                <rect key="frame" x="16" y="280" width="343" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="1tJ-xh-39a" secondAttribute="trailing" id="0Id-B0-czV"/>
+                            <constraint firstItem="z2D-9U-Smb" firstAttribute="top" secondItem="VkP-yb-Emr" secondAttribute="bottom" constant="23" id="1PM-n3-eLD"/>
+                            <constraint firstItem="hdW-Bm-ovd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E5I-us-x76"/>
+                            <constraint firstItem="5SG-Zr-DeI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="E8y-g8-Kgg"/>
+                            <constraint firstItem="hdW-Bm-ovd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="73" id="Lco-gD-kGE"/>
+                            <constraint firstItem="VkP-yb-Emr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N1V-WJ-QlK"/>
+                            <constraint firstItem="z2D-9U-Smb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Uui-wO-bhR"/>
+                            <constraint firstItem="VkP-yb-Emr" firstAttribute="top" secondItem="hdW-Bm-ovd" secondAttribute="bottom" constant="31" id="aht-QO-Vy3"/>
+                            <constraint firstItem="5SG-Zr-DeI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dmC-Gv-bPy"/>
                             <constraint firstItem="1tJ-xh-39a" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="e1C-Rc-fEJ"/>
+                            <constraint firstItem="z2D-9U-Smb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="en9-PK-vqW"/>
+                            <constraint firstItem="5SG-Zr-DeI" firstAttribute="top" secondItem="z2D-9U-Smb" secondAttribute="bottom" constant="8" id="oOc-Fr-4Fy"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1tJ-xh-39a" secondAttribute="bottom" id="ttv-aR-hwd"/>
                             <constraint firstItem="1tJ-xh-39a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="w4q-Jo-uXf"/>
                         </constraints>
@@ -36,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="135.19999999999999" y="136.28185907046478"/>
         </scene>
     </scenes>
     <resources>

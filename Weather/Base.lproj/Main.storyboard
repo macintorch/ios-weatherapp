@@ -26,30 +26,36 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's The Weather?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdW-Bm-ovd">
-                                <rect key="frame" x="44.5" y="93" width="286" height="36"/>
+                                <rect key="frame" x="44.5" y="28" width="286" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your city" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkP-yb-Emr">
-                                <rect key="frame" x="132.5" y="160" width="110.5" height="21"/>
+                                <rect key="frame" x="132" y="95" width="111" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. London, Kuala Lumpur" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z2D-9U-Smb">
-                                <rect key="frame" x="16" y="204" width="343" height="30"/>
+                                <rect key="frame" x="16" y="139" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SG-Zr-DeI">
-                                <rect key="frame" x="16" y="242" width="343" height="30"/>
+                                <rect key="frame" x="16" y="177" width="343" height="30"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="getWeatherButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gWx-jU-Wti"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMY-IB-VDj">
-                                <rect key="frame" x="16" y="280" width="343" height="172"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMY-IB-VDj">
+                                <rect key="frame" x="16" y="215" width="343" height="172"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="172" id="fXM-Nj-WgB"/>
+                                    <constraint firstAttribute="width" constant="343" id="sZ7-25-4IG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -59,13 +65,15 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="1tJ-xh-39a" secondAttribute="trailing" id="0Id-B0-czV"/>
                             <constraint firstItem="z2D-9U-Smb" firstAttribute="top" secondItem="VkP-yb-Emr" secondAttribute="bottom" constant="23" id="1PM-n3-eLD"/>
+                            <constraint firstItem="LMY-IB-VDj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Ls-FA-xq5"/>
                             <constraint firstItem="hdW-Bm-ovd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E5I-us-x76"/>
                             <constraint firstItem="5SG-Zr-DeI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="E8y-g8-Kgg"/>
-                            <constraint firstItem="hdW-Bm-ovd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="73" id="Lco-gD-kGE"/>
                             <constraint firstItem="VkP-yb-Emr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N1V-WJ-QlK"/>
+                            <constraint firstItem="hdW-Bm-ovd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="S7p-7Y-dXB"/>
                             <constraint firstItem="z2D-9U-Smb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Uui-wO-bhR"/>
                             <constraint firstItem="VkP-yb-Emr" firstAttribute="top" secondItem="hdW-Bm-ovd" secondAttribute="bottom" constant="31" id="aht-QO-Vy3"/>
                             <constraint firstItem="5SG-Zr-DeI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dmC-Gv-bPy"/>
+                            <constraint firstItem="LMY-IB-VDj" firstAttribute="top" secondItem="5SG-Zr-DeI" secondAttribute="bottom" constant="8" id="dun-Q5-xOR"/>
                             <constraint firstItem="1tJ-xh-39a" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="e1C-Rc-fEJ"/>
                             <constraint firstItem="z2D-9U-Smb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="en9-PK-vqW"/>
                             <constraint firstItem="5SG-Zr-DeI" firstAttribute="top" secondItem="z2D-9U-Smb" secondAttribute="bottom" constant="8" id="oOc-Fr-4Fy"/>
@@ -73,6 +81,10 @@
                             <constraint firstItem="1tJ-xh-39a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="w4q-Jo-uXf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="z2D-9U-Smb" id="0fE-kL-dIU"/>
+                        <outlet property="resultLabel" destination="LMY-IB-VDj" id="nV1-Uo-Yjk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -37,8 +37,25 @@ class ViewController: UIViewController {
                 if let unwrappedData = data {
                     
                     let dataString = NSString(data: unwrappedData, encoding: String.Encoding.utf8.rawValue)
+                 
+                    var stringSeparator = "Weather Forecast Summary:</b><span class=\"read-more-small\"><span class=\"read-more-content\"> <span class=\"phrase\">"
                     
-                    print(dataString)
+                    if let contentArray = dataString?.components(separatedBy: stringSeparator) {
+                        
+                        if contentArray.count > 0 {
+                            stringSeparator = "</span>"
+                            
+                            let newContentArray = contentArray[1].components(separatedBy: stringSeparator)
+                                if newContentArray.count > 0 {
+                                    
+                                    var message = newContentArray[0]
+                                    
+                                    print(newContentArray[0])
+                                }
+                            
+                        }
+                    
+                    }
                 }
             }
         }

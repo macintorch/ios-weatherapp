@@ -50,13 +50,13 @@
                                     <action selector="getWeatherButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gWx-jU-Wti"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMY-IB-VDj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMY-IB-VDj">
                                 <rect key="frame" x="16" y="215" width="343" height="172"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="172" id="fXM-Nj-WgB"/>
                                     <constraint firstAttribute="width" constant="343" id="sZ7-25-4IG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
